@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 160 30% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 10%;
+    --primary: 152 55% 33%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 43 96% 15%;
+    --muted: 150 10% 93%;
+    --muted-foreground: 150 10% 45%;
+    --accent: 199 80% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 152 55% 33%;
+    --radius: 0.75rem;
+
+    --stat-green: 152 55% 33%;
+    --stat-blue: 217 91% 60%;
+    --stat-orange: 25 95% 53%;
+    --stat-purple: 271 76% 53%;
+    --stat-pink: 340 82% 52%;
+    --stat-teal: 174 72% 40%;
+
+    --sidebar-background: 152 40% 18%;
+    --sidebar-foreground: 150 20% 90%;
+    --sidebar-primary: 43 96% 56%;
+    --sidebar-primary-foreground: 43 96% 15%;
+    --sidebar-accent: 152 35% 25%;
+    --sidebar-accent-foreground: 150 20% 95%;
+    --sidebar-border: 152 30% 25%;
+    --sidebar-ring: 43 96% 56%;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .theme-ocean {
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 199 80% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --sidebar-background: 217 80% 18%;
+    --sidebar-accent: 217 70% 25%;
+    --sidebar-border: 217 60% 25%;
+    --ring: 217 91% 50%;
+  }
+
+  .theme-sunset {
+    --primary: 25 95% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 82% 52%;
+    --secondary-foreground: 0 0% 100%;
+    --sidebar-background: 15 70% 18%;
+    --sidebar-accent: 15 60% 25%;
+    --sidebar-border: 15 50% 25%;
+    --ring: 25 95% 50%;
+  }
+
+  .theme-royal {
+    --primary: 271 76% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 290 60% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --sidebar-background: 271 60% 15%;
+    --sidebar-accent: 271 50% 22%;
+    --sidebar-border: 271 40% 22%;
+    --ring: 271 76% 45%;
+  }
+
+  .theme-rose {
+    --primary: 340 82% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 350 70% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --sidebar-background: 340 60% 15%;
+    --sidebar-accent: 340 50% 22%;
+    --sidebar-border: 340 40% 22%;
+    --ring: 340 82% 48%;
+  }
+
+  .theme-midnight {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 90%;
+    --card: 222 47% 12%;
+    --card-foreground: 210 40% 90%;
+    --popover: 222 47% 12%;
+    --popover-foreground: 210 40% 90%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 199 80% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 222 30% 18%;
+    --muted-foreground: 215 20% 55%;
+    --border: 222 30% 20%;
+    --input: 222 30% 20%;
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 30% 80%;
+    --sidebar-accent: 222 40% 14%;
+    --sidebar-border: 222 30% 14%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .stat-card-green {
+    background: linear-gradient(135deg, hsl(152 55% 33%), hsl(152 55% 45%));
+    color: white;
+  }
+  .stat-card-blue {
+    background: linear-gradient(135deg, hsl(217 91% 50%), hsl(217 91% 65%));
+    color: white;
+  }
+  .stat-card-orange {
+    background: linear-gradient(135deg, hsl(25 95% 50%), hsl(25 95% 63%));
+    color: white;
+  }
+  .stat-card-purple {
+    background: linear-gradient(135deg, hsl(271 76% 48%), hsl(271 76% 62%));
+    color: white;
+  }
+  .stat-card-pink {
+    background: linear-gradient(135deg, hsl(340 82% 48%), hsl(340 82% 62%));
+    color: white;
+  }
+  .stat-card-teal {
+    background: linear-gradient(135deg, hsl(174 72% 35%), hsl(174 72% 48%));
+    color: white;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
